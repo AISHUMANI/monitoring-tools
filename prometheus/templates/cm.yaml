@@ -26,7 +26,7 @@ data:
 {{ $root.Values.server.global | toYaml | trimSuffix "\n" | indent 6 }}
 {{- if $root.Values.server.remoteWrite }}
     remote_write:
-{{- include "prometheus.server.remoteWrite" $root | nindent 4 }}
+{{- include "prometheus.server.remoteWrite" $root | nindent 6 }}
 {{- end }}
 {{- if $root.Values.server.remoteRead }}
     remote_read:
