@@ -527,7 +527,9 @@ server:
     ##   GKE, AWS & OpenStack)
     ##
     storageClass: "gp2"
-
+    annotations:
+      volume.beta.kubernetes.io/storage-class: "gp2"
+      
     ## Subdirectory of Prometheus server data Persistent Volume to mount
     ## Useful if the volume's root directory is not empty
     ##
