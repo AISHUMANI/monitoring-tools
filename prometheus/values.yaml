@@ -706,7 +706,9 @@ server:
 
   ## Security context to be added to server container
   ##
-  containerSecurityContext: {}
+  containerSecurityContext:
+    runAsUser: 65534
+    runAsNonRoot: true
 
   service:
     ## If false, no Service will be created for the Prometheus server
