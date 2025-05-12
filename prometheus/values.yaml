@@ -442,7 +442,8 @@ server:
   ## Node labels for Prometheus server pod assignment
   ## Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/
   ##
-  nodeSelector: {}
+  nodeSelector:
+    topology.kubernetes.io/zone: us-east-1a
 
   ## Pod affinity
   ##
